@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM debian
 
 MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 
