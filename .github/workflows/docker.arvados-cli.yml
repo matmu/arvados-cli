@@ -1,4 +1,4 @@
-name: 100-GRCh38
+name: Install Arvados-CLI
 on: [push]
 jobs:
   build:
