@@ -7,8 +7,7 @@ RUN /usr/bin/apt-key adv --keyserver pool.sks-keyservers.net --recv 1078ECD7
 RUN echo "deb http://apt.arvados.org/ bionic main" | tee /etc/apt/sources.list.d/arvados.list
 RUN apt-get update && apt-get -y --no-install-recommends install python-arvados-python-client python-arvados-fuse && apt-get clean
 RUN gem install arvados-cli
-RUN RUN apt-get update && apt-get -y --no-install-recommends install wget && \
-cd /usr/local/share/ca-certificates && \
+RUN cd /usr/local/share/ca-certificates && \
 wget -q -O RocheRootCA.cer http://certinfo.roche.com/rootcerts/Roche%20Root%20CA%201.cer && \
 wget -q -O RocheEnterpriseCA1.cer http://certinfo.roche.com/rootcerts/RocheEnterpriseCA1.cer && \
 wget -q -O RocheEnterpriseCA2.cer http://certinfo.roche.com/rootcerts/RocheEnterpriseCA2.cer && \
