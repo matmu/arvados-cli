@@ -31,3 +31,4 @@ conda install -y python=3 && \
 conda update conda && \
 conda clean --all --yes
 
+ENV PATH /opt/conda/bin:$PATH
