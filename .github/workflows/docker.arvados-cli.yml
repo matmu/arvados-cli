@@ -1,5 +1,7 @@
 name: Install Arvados-CLI
-on: [push]
+on: 
+  paths:
+   - 'Dockerfile'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,4 +14,4 @@ jobs:
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASS }}
         dockerfile: Dockerfile
-        tags: "latest"
+        tags: "plain"
