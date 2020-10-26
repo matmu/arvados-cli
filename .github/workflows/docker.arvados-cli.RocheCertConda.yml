@@ -1,4 +1,4 @@
-name: Install Arvados-CLI (+ RocheCert + Conta
+name: Install Arvados-CLI (+ RocheCert + Conda)
 on: 
   push:
     paths:
