@@ -22,4 +22,3 @@ openssl x509 -in RocheRootCA.cer -inform der -outform pem > RocheRootCA.crt && \
 openssl x509 -in RocheEnterpriseCA1.cer -inform der -outform pem > RocheEnterpriseCA1.crt && \
 openssl x509 -in RocheEnterpriseCA2.cer -inform der -outform pem > RocheEnterpriseCA2.crt && \
 update-ca-certificates
-
