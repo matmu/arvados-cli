@@ -14,5 +14,5 @@ jobs:
         name: matmu/arvados-cli
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASS }}
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile.RocheCert
         tags: "RocheCert"
