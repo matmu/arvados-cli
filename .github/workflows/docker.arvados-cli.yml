@@ -1,7 +1,8 @@
 name: Install Arvados-CLI
 on: 
-  paths:
-   - 'Dockerfile'
+  push:
+    paths:
+    - 'Dockerfile'
 jobs:
   build:
     runs-on: ubuntu-latest
