@@ -1,5 +1,7 @@
 FROM conda/miniconda3:latest
 
+MAINTAINER Matthias Munz <matthias.munz@gmx.de>
+
 
 # ArvadosCLI
 RUN apt-get update && \
