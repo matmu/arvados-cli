@@ -4,7 +4,7 @@ MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 
 RUN /usr/bin/apt-key adv --keyserver pool.sks-keyservers.net --recv 1078ECD7 && \
 echo "deb http://apt.arvados.org/ jessie main" | tee /etc/apt/sources.list.d/arvados.list && \
-apt-get update && apt-get -y --no-install-recommends install ruby ruby-dev bundler wget python-arvados-python-client python-arvados-fuse && \
+apt-get update && apt-get -y --no-install-recommends install ruby ruby-dev bundler wget python-arvados-python-client python-arvados-fuse gnupg && \
 apt-get clean && \
 gem install arvados-cli
 
