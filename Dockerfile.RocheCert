@@ -2,7 +2,7 @@ FROM debian
 
 MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 
-RUN apt-get update && apt-get -y --no-install-recommends install ruby ruby-dev bundler wget python-arvados-python-client python-arvados-fuse && apt-get clean
+RUN sudo /usr/bin/apt-key adv --keyserver pool.sks-keyservers.net --recv 1078ECD7 && apt-get update && apt-get -y --no-install-recommends install ruby ruby-dev bundler wget python-arvados-python-client python-arvados-fuse && apt-get clean
 RUN gem install arvados-cli
 
 RUN cd /usr/local/share/ca-certificates && \
