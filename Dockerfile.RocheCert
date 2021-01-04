@@ -1,12 +1,12 @@
-FROM debian
+FROM debian:buster
 
 MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 
-RUN /usr/bin/apt-key adv --keyserver pool.sks-keyservers.net --recv 1078ECD7 && \
-echo "deb http://apt.arvados.org/ jessie main" | tee /etc/apt/sources.list.d/arvados.list && \
-apt-get update && apt-get -y --no-install-recommends install ruby ruby-dev bundler wget python-arvados-python-client python-arvados-fuse gnupg && \
-apt-get clean && \
-gem install arvados-cli
+RUN apt-get update && apt-get -y --no-install-recommends install ruby-full bundler build-essential libcurl4-openssl-dev gnupg wget dirmngr && apt-get clean && ruby --version
+RUN /usr/bin/apt-key adv --keyserver pool.sks-keyservers.net --recv 1078ECD7
+RUN echo "deb http://apt.arvados.org/buster buster main" | tee /etc/apt/sources.list.d/arvados.list
+RUN apt-get update && apt-get -y --no-install-recommends install python-arvados-python-client python-arvados-fuse && apt-get clean
+RUN gem install arvados-cli
 
 RUN cd /usr/local/share/ca-certificates && \
 wget -q -O RocheRootCA.cer http://certinfo.roche.com/rootcerts/Roche%20Root%20CA%201.cer && \
