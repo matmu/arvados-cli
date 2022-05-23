@@ -4,7 +4,7 @@
 
 Docker images are available [here](https://hub.docker.com/repository/docker/matmu/arvados-cli/general).
 
-# Check Arvados SDK version
+## Check Arvados SDK version
 ```
 docker pull matmu/arvados-cli:RocheCert
 docker run -it --entrypoint /bin/bash matmu/arvados-cli:RocheCert
